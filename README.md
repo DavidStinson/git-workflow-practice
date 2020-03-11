@@ -9,3 +9,10 @@
 - One group should write the code for the 'add event' page.
 - One group should write the code for the 'details' page, which should include a field/button to add an attendee to an event as well as link to the 'update' page.
 - One group should write the code for the 'update' page, which should allow the user to update an event and redirect back to the event details page.
+
+# 
+# 
+## Hints:
+- Don't forget to install your node packages after cloning the repository!
+- Talk with each other about naming convention so that file names align properly.
+- Don't forget to checkout to a branch before beginning your work.  Don't make changes directly to the master branch!!!
