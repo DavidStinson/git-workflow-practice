@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/stuffs',
+mongoose.connect('mongodb://localhost/events',
     {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true}
 );
 
