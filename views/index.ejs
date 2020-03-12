@@ -4,6 +4,29 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h3>This is where the all of the stuff will go!</h3>
+    <a href="/events/new">Add Event</a>
+    <br>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Location</th>
+        <th>Date</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <h3>Here are all the events!</h3>
+    <tbody>
+      <% events.forEach(function(e) { %>
+        <tr>
+          <td><%= e.title %></td>
+          <td><%= e.location %></td>
+          <td><%= e.date %></td>
+          <td><a href="/events/<%= e._id %>/show">View Details</a></td>
+          <td><form action="/events/<%= e._id %>?_method=DELETE" method="POST">
+            <button type="submit">X</button>
+          </form></td>
+        </tr> 
+     <% }) %>
+    </tbody>
   </body>
 </html>

@@ -11,7 +11,9 @@ module.exports = {
 }
 
 function index(req, res) {
-    res.render('index');
+    Event.find({}, function(err, events) {
+        res.render('index',{events});
+    })
 }
 
 function newEvent(req, res) {
