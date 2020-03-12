@@ -21,8 +21,9 @@ function newEvent(req, res) {
 }
 
 function show(req, res) {
-    
-    res.render('events/show');
+    Event.findById(req.params.id, function(err, event) {
+        res.render('events/show', {event});
+    });
 }
 
 function create(req, res) {
