@@ -26,8 +26,15 @@ function show(req, res) {
 }
 
 function create(req, res) {
-    
-    res.render('events/show');
+    const event = new Event(req.body);
+    console.log(req.body);
+    event.save(function(err) {
+        if (err) {
+            return res.render('/events/new');
+        }
+        console.log(event)
+        res.redirect('/events');
+    });
 }
 
 function deleteOne(req, res) {
