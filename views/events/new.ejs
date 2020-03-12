@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Add new event</title>
-</head>
-<body>
+  </head>
+  <body>
     <form action="/events" method="POST">
-    <label>Name: 
-        <input type="text" name="title">
-    </label>
-    <label>Location: 
-        <input type="text" name="location">
-    </label>
-    <label>Date:
-        <input type="datetime-local" name="date">
-    </label>
-    <label>Attendees
-    <input type="text" name="attendees">
-    </label>
-    <input type="submit" value="Add Event">
+      <label
+        >Name:
+        <input type="text" name="title" />
+      </label>
+      <label
+        >Location:
+        <input type="text" name="location" />
+      </label>
+      <label
+        >Date:
+        <input type="datetime-local" name="date" />
+      </label>
+      <label
+        >Attendees
+        <input type="text" name="attendees" />
+      </label>
+      <input type="submit" value="Add Event" />
     </form>
-</body>
+  </body>
 </html>

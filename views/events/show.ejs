@@ -25,7 +25,9 @@
         </tbody>
     </table></br>
     <div>
-        <button href="/events/<%= event._id %>/edit">Edit Event</button>
+    <form action="/events/<%= event._id %>/update" method="GET">
+        <button type="submit">Edit Event</button>
+    </form>
     </div>
     </br>
     <div>

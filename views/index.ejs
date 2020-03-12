@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <a href="/events/new">Add Event</a>
-    <br>
+    <br />
     <thead>
       <tr>
         <th>Title</th>
@@ -17,16 +17,18 @@
     <h3>Here are all the events!</h3>
     <tbody>
       <% events.forEach(function(e) { %>
-        <tr>
-          <td><%= e.title %></td>
-          <td><%= e.location %></td>
-          <td><%= e.date %></td>
-          <td><a href="/events/<%= e._id %>/show">View Details</a></td>
-          <td><form action="/events/<%= e._id %>?_method=DELETE" method="POST">
+      <tr>
+        <td><%= e.title %></td>
+        <td><%= e.location %></td>
+        <td><%= e.date %></td>
+        <td><a href="/events/<%= e._id %>">View Details</a></td>
+        <td>
+          <form action="/events/<%= e._id %>?_method=DELETE" method="POST">
             <button type="submit">X</button>
-          </form></td>
-        </tr> 
-     <% }) %>
+          </form>
+        </td>
+      </tr>
+      <% }) %>
     </tbody>
   </body>
 </html>

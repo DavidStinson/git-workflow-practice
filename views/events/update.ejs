@@ -1,30 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <title>Update Events</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <center>
-    <h2 style="color: orange;">Update Event</h2><br>
+      <h2 style="color: orange;">Update Event</h2>
+      <br />
     </center>
     <center>
-    <form action="/events/<%= event._id %>?_method=PUT" method="POST">
-        <label style="background-color: rgba(0,0,0,0.8);">Event Name:
-            <input style="color: orange; text-align: center;" type="text" name="title" value="<%= event.title %>">
-        </label><br><br>
-        <label style="background-color: rgba(0,0,0,0.8);">Location:
-            <input style="color: orange; text-align: center;" type="text" name="location" value="<%= event.location %>">
-        </label><br><br>
-        <label style="background-color: rgba(0,0,0,0.8);">Date:
-            <input style="color: orange; text-align: center;" type="text" name="date" value="<%= event.date %>">
-        </label><br><br>
+      <form action="/events/<%= event._id %>?_method=PUT" method="POST">
+        <label style="background-color: rgba(0,0,0,0.8);"
+          >Event Name:
+          <input
+            style="color: orange; text-align: center;"
+            type="text"
+            name="title"
+            value="<%= event.title %>"
+          /> </label
+        ><br /><br />
+        <label style="background-color: rgba(0,0,0,0.8);"
+          >Location:
+          <input
+            style="color: orange; text-align: center;"
+            type="text"
+            name="location"
+            value="<%= event.location %>"
+          /> </label
+        ><br /><br />
+        <label style="background-color: rgba(0,0,0,0.8);"
+          >Date:
+          <input
+            style="color: orange; text-align: center;"
+            type="datetime-local"
+            name="date"
+            value="<%= event.date %>"
+          /> </label
+        ><br /><br />
         <button type="submit" class="btn btn-success purple">Update</button>
-    </form>
-</center>
-</body>
+      </form>
+    </center>
+  </body>
 </html>
