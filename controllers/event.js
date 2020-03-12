@@ -44,11 +44,13 @@ function deleteOne(req, res) {
 }
 
 function edit(req, res) {
-    
-    res.render('events/show');
+   Event.findById(req.params.id, function(err, event){
+       res.render('events/update', {event});
+   })
 }
 
 function update(req, res) {
-    
-    res.render('events/show');
+    Event.findByIdAndUpdate(req.params.id, function(err, event){
+        res.redirect(`events/${req.params.id}`);
+    })
 }
