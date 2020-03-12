@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Document</title>
+    <title>Details Page!!!</title>
 </head>
 <body>
-    
+    <h1>Event Details</h1></br>
+    <table>
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Location</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td><%= event.title %></td>
+            <td><%= event.location %></td>
+            <td><%= event.date.toLocaleDateString() %></td>
+            </tr>
+        </tbody>
+    </table></br>
+    <div>
+        <button href="/events/<%= event._id %>/edit">Edit Event</button>
+    </div>
+    </br>
+    <div>
+        <h3>Attendees</h3>
+        <p><%= event.attendees.map(i => i).join(', ') %></p></br></br>
+        <form action="/events/<%= event._id %>" method="POST">
+            <input type="text" name="attendee" placeholder="Name of Attendee...">
+            <button type="submit">Add Attendee</button>
+        </form>
+    </div>
 </body>
 </html>
