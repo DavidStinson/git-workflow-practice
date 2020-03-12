@@ -18,7 +18,27 @@ function newEvent(req, res) {
     res.render('events/new');
 }
 
-function show(req, res, idx) {
+function show(req, res) {
+    
+    res.render('events/show');
+}
+
+function create(req, res) {
+    
+    res.render('events/show');
+}
+
+function deleteOne(req, res) {
+    
+    res.render('events/show');
+}
+
+function edit(req, res) {
+    
+    res.render('events/show');
+}
+
+function update(req, res) {
     
     res.render('events/show');
 }
